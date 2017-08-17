@@ -1,0 +1,14 @@
+body {
+	font-family: 'Open Sans', 'Arial', sans-serif;
+	font-size: 15px;
+	color: #464646;
+	line-height: 30px;
+	font-weight: 300;
+}
+
+.title,
+.subtitle {
+	font-family: 'Gilroy ExtraBold', 'Arial', sans-serif;
+	font-size: 47px;
+	color: #000;
+}
