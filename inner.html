@@ -49,9 +49,9 @@
 	    </div>
 	</header>
 
-	<main class="catalog-main container">
+	<main class="catalog-main">
 		
-		<section class="catalog-title">
+		<section class="catalog-title container">
 			<h1 class="title inner-title">Моноподы для селфи</h1>
 			<ul class="breadscrumbs">
 				<li><a href="index.html">Главная</a></li>
@@ -59,53 +59,90 @@
 				<li><a>Моноподы для селфи</a></li>
 			</ul>
 		</section>
-
-		<section class="title-wrapper">
-			<h2 class="filter-title">Фильтр:</h2>
-			<div class="catalog-title-sort">
-				<h2 class="sort-title">Сортировка:</h2>
-				<a class="current">По цене</a>
-				<a href="#">По типу</a>
-				<a href="#">По популярности</a>
-			</div>
-			<div class="filter-controls">
-				<a class="btn-up" href="#">up</a>
-				<a class="btn-down btn-active">down</a>
-			</div>
-		</section>
+		<div class="wrapper">
+        <section class="catalog-filter">            
+            <div class="filter-title-wrapper">                               
+                <h2 class="filter-title">Фильтр:</h2>                               
+            </div>            
+            <form action="#" class="filter-form" method="post">
+            	<fieldset>
+            		<legend class="form-legend">Стоимость:</legend>
+            		<div class="range-controls">
+            			<div class="scale">
+            				<div class="bar"></div>
+            			</div>
+            			<div class="range-btn btn-min"></div>
+            			<div class="range-btn btn-max"></div>
+            		</div>
+            		<div class="selected-price">
+            			<span>от 0</span>
+            			<span>до 5000</span>
+            		</div>
+            	</fieldset>
+            	<fieldset>
+            		<legend class="form-legend form-legend-checkbox">Цвет</legend>
+            		<label class="filter-checkbox">
+            		    <input class="visually-hidden" type="checkbox" name="black" checked>
+            		    <span class="checkbox-indicator"></span>
+            		    Черный
+            		</label>
+            		<label class="filter-checkbox">
+            		    <input class="visually-hidden" type="checkbox" name="white">
+            		    <span class="checkbox-indicator"></span>
+            		    Белый
+            		</label>
+            		<label class="filter-checkbox">
+            		    <input class="visually-hidden" type="checkbox" name="blue" checked>
+            		    <span class="checkbox-indicator"></span>
+            		    Синий
+            		</label>
+            		<label class="filter-checkbox">
+            		    <input class="visually-hidden" type="checkbox" name="red" checked>
+            		    <span class="checkbox-indicator"></span>
+            		    Красный
+            		</label>
+            		<label class="filter-checkbox">
+            		    <input class="visually-hidden" type="checkbox" name="pink">
+            		    <span class="checkbox-indicator"></span>
+            		    Розовый
+            		</label>
+            	</fieldset>
+            	<fieldset>
+            		<legend class="form-legend form-legend-radio">Bluetooth</legend>
+            		<label class="filter-radio">
+            		    <input class="visually-hidden" type="radio" name="bluetooth" value="Есть" id="btn-yes" checked>
+            		    <span class="radio-indicator"></span>
+            		    Есть
+            		</label>
+            		<label class="filter-radio">
+            		    <input class="visually-hidden" type="radio" name="bluetooth" value="Нет" id="btn-no">
+            		    <span class="radio-indicator"></span>
+            		    Нет
+            		</label>
+            	</fieldset>
+            	<button class="filter-form-btn btn" type="submit">Показать</button>
+            </form>
+        </section>
+        
 
 		<section class="content-wrapper">
-			
-            <section class="catalog-filter">
-            	<form action="#" class="filter-form" method="post">
-            		<fieldset>
-            			<legend class="form-legend">Стоимость:</legend>
-            		</fieldset>
-            		<fieldset>
-            			<legend class="form-legend">Цвет</legend>
-            			<input class="filter-checkbox" type="checkbox" name="black" id="black" checked>
-            			<label for="black">Черный</label>
-            			<input class="filter-checkbox" type="checkbox" name="white" id="white">
-            			<label for="white">Белый</label>
-            			<input class="filter-checkbox" type="checkbox" name="blue" id="blue" checked>
-            			<label for="blue">Синий</label>
-            			<input class="filter-checkbox" type="checkbox" name="red" id="red" checked>
-            			<label for="red">Красный</label>
-            			<input class="filter-checkbox" type="checkbox" name="pink" id="pink">
-            			<label for="pink">Розовый</label>
-            		</fieldset>
-            		<fieldset>
-            			<legend class="form-legend">Bluetooth</legend>
-            			<input class="filter-radio" type="radio" name="bluetooth" value="Есть" id="btn-yes" checked>
-            			<label for="btn-yes">Есть</label>
-            			<input class="filter-radio" type="radio" name="bluetooth" value="Нет" id="btn-no">
-            			<label for="btn-no">Нет</label>
-            		</fieldset>
-            		<button class="filter-form-btn btn" type="submit">Показать</button>
-            	</form>
-            </section>
+			<section class="title-wrapper">
+		        	<div class="sort-title-wrapper">		        
+			            <div class="catalog-title-sort">
+			            	<h2 class="sort-title">Сортировка:</h2>
+			            	<a class="current">По цене</a>
+			            	<a href="#">По типу</a>
+			            	<a href="#">По популярности</a>
+			            </div>
+			            <div class="filter-controls">
+			            	<a class="btn-up" href="#"><span class="visually-hidden">up</span></a>
+			            	<a class="btn-down btn-active"><span class="visually-hidden">down</span></a>
+			            </div>
+			        </div>
+		    </section>
 
             <section class="catalog-items">
+
             	<section class="product-items">
 
             		<article class="object">
@@ -124,8 +161,8 @@
             				<a class="btn object-action-buy" href="#">В корзину</a>
             				<a class="object-action-compare" href="#">Добавить к сравнению</a>
             			</div>
-            			<a class="object-name" href="#">Профессиональная селфи-палка</a>
-            			<span>1500 руб.</span>
+            			<a class="object-name" href="#">Профессиональная<br> селфи-палка</a>
+            			<span>1 500 руб.</span>
             		</article>
 
             		<article class="object">
@@ -135,7 +172,7 @@
             				<a class="object-action-compare" href="#">Добавить к сравнению</a>
             			</div>
             			<a class="object-name" href="#">Непотопляемая селфи-палка </a>
-            			<span>2500 руб.</span>
+            			<span>2 500 руб.</span>
             		</article>
 
             		<article class="object new">
@@ -145,7 +182,7 @@
             				<a class="object-action-compare" href="#">Добавить к сравнению</a>
             			</div>
             			<a class="object-name" href="#">Селфи-палка «Следуй за мной»</a>
-            			<span>4900 руб.</span>
+            			<span>4 900 руб.</span>
             		</article>
 
             	</section>
@@ -155,7 +192,7 @@
             		    <a class="prev-next-link" href="#">Назад</a>
             		</li>
             		<li>
-            		    <a class="current">1</a>
+            		    <a class="current-link">1</a>
             		</li>
             		<li>
             		    <a href="#">2</a>
@@ -170,7 +207,7 @@
 
             </section>
         </section>
-
+        </div>
 	</main>
 
 	<footer class="main-footer">
