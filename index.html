@@ -13,7 +13,7 @@
 			<a class="main-header-logo">
 				Device
 			</a>
-			
+
 			<form class="search-form" action="#" method="get">
 				<input class="search-form-field" type="search" name="search" placeholder="Поиск по сайту">
 				<input type="submit" name="submit" value="Найти"> 
@@ -24,7 +24,7 @@
 				<a class="header-comparison-link" href="#">Сравнить</a>
 				<a class="header-basket-link" href="#">Корзина</a>
 			</div>
-			
+
 			<nav class="main-nav">
 				<ul class="main-nav-lists">
 					<li>
@@ -53,9 +53,9 @@
 			<input type="radio" id="slider-btn-3" name="slider-toggle">
 
 			<div class="slider-controls">
-				<label for="slider-btn-1"></label>
-				<label for="slider-btn-2"></label>
-				<label for="slider-btn-3"></label>
+			    <label for="slider-btn-1" aria-label="Слайд №1" tabindex="0"></label>
+				<label for="slider-btn-2" aria-label="Слайд №2" tabindex="0"></label>
+				<label for="slider-btn-3" aria-label="Слайд №3" tabindex="0"></label>
 			</div>
 
 			<div class="slider-slides">
@@ -134,31 +134,38 @@
 		<section class="popular container">
 
 			<h2 class="visually-hidden">Популярные товары</h2>
-
-			<a class="popular-item-1 popular-item-link" href="#">
-				Виртуальная реальность
-			</a>
-
-			<a class="popular-item-2 popular-item-link" href="#">
-				Моноподы<br> для селфи
-			</a>
-
-			<a class="popular-item-3 popular-item-link" href="#">
-				Экшн-камеры
-			</a>
-
-			<a class="popular-item-4 popular-item-link" href="#">
-				Фитнес-браслеты
-			</a>
-
-			<a class="popular-item-5 popular-item-link" href="#">
-				Умные часы
-			</a>
-
-			<a class="popular-item-6 popular-item-link" href="#">
-				Квадрокоптеры
-			</a>
-
+            <ul class="popular-list">
+                <li class="popular-item">
+			        <a class="popular-item-1" href="#">
+			        	Виртуальная реальность
+			        </a>
+                </li>
+                <li class="popular-item">
+			        <a class="popular-item-2" href="inner.html">
+			        	Моноподы&nbsp;для селфи
+			        </a>
+			    </li>
+                <li class="popular-item">
+			        <a class="popular-item-3" href="#">
+			        	Экшн-камеры
+			        </a>
+                </li>
+                <li class="popular-item">
+			        <a class="popular-item-4" href="#">
+			        	Фитнес-браслеты
+			        </a>
+                </li>
+                <li class="popular-item">
+			        <a class="popular-item-5" href="#">
+			        	Умные часы
+			        </a>
+                </li>
+                <li class="popular-item">
+			        <a class="popular-item-6" href="#">
+			        	Квадрокоптеры
+			        </a>
+                </li>
+            </ul>
 		</section>
 
 		<section class="services">
@@ -167,11 +174,11 @@
 				<input class="visually-hidden" type="radio" id="services-btn-1" name="services-toggle" checked>
 				<input class="visually-hidden" type="radio" id="services-btn-2" name="services-toggle">
 				<input class="visually-hidden" type="radio" id="services-btn-3" name="services-toggle">
-				
+
 				<div class="services-controls">        
-					<label class="btn" for="services-btn-1">Доставка</label>
-					<label class="btn" for="services-btn-2">Гарантия</label>
-					<label class="btn" for="services-btn-3">Кредит</label>            	
+					<label class="btn" for="services-btn-1" tabindex="0">Доставка</label>
+					<label class="btn" for="services-btn-2" tabindex="0">Гарантия</label>
+					<label class="btn" for="services-btn-3" tabindex="0">Кредит</label>            	
 				</div>
 
 				<div class="services-slides">
@@ -183,12 +190,12 @@
 							заработаем, поднимая его на ваш этаж.
 						</p>
 					</section>
-					
+
 					<section class="services-item warranty">
 						<h2 class="subtitle">Гарантия</h2>
 						<p>
 							Если из-за возгарания купленного у нас товара у вас сгорит
-							дом — не переживайте, мы выдадим вам новый. 
+							дом — не переживайте, мы выдадим вам новый.<br> 
 							Товар, не дом, конечно же.
 						</p>
 					</section>
@@ -319,7 +326,7 @@
 	<section class="modal modal-right-us">
 
 		<button class="modal-close" type="button">Закрыть</button>
-		
+
 		<form class="form-right-us" action="#" method="post">
 			<p>
 				<label for="name">Ваше имя:</label>			    
