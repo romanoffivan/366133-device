@@ -275,7 +275,7 @@ input[type="radio"].visually-hidden {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	flex-wrap: wrap;
+	
 	padding-bottom: 50px;
 	list-style: none;
 }
@@ -374,6 +374,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider {
+	position: relative;
 	margin-bottom: 105px;	 
 	overflow: hidden;
 	background: linear-gradient(180deg, #f7e296 110px, #ffffff 110px);
@@ -385,8 +386,8 @@ input[type="radio"].visually-hidden {
 
 .slider-controls {
 	position: absolute;
-	bottom: 95px;
-	right: 175px;
+	bottom: 148px;
+	right: 80px;
 	display: flex;
 	justify-content: space-between;
 	width: 80px;
@@ -1095,6 +1096,10 @@ input[type="checkbox"]:checked + .checkbox-indicator::before {
 	width: 25px;
 	height: 25px;
 	background: url(../img/checkbox-on.svg) no-repeat;
+}
+
+.filter-radio {
+	width: 60px;
 }
 
 .filter-radio::before {
