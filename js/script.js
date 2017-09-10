@@ -8,46 +8,46 @@ var mail = form.querySelector(".email-field");
 var message = form.querySelector(".letter-field");
 
 link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.add("modal-show");
-    nickname.focus();
+  evt.preventDefault();
+  popup.classList.add("modal-show");
+  nickname.focus();
 });
 
 close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
+  evt.preventDefault();
+  popup.classList.remove("modal-show");
 });
 
 form.addEventListener("submit", function (evt) {
-    if (!nickname.value || !mail.value || !message.value) {
-      evt.preventDefault();
-      if (!nickname.value) {
-          nickname.classList.add("field-invalid");
-      }
-      if (!mail.value) {
-          mail.classList.add("field-invalid");
-      }
-      if (!message.value) {
-          message.classList.add("field-invalid");
-      }
+  if (!nickname.value || !mail.value || !message.value) {
+    evt.preventDefault();
+    if (!nickname.value) {
+      nickname.classList.add("field-invalid");
     }
-    if (nickname.value) {
-        nickname.classList.remove("field-invalid");
+    if (!mail.value) {
+      mail.classList.add("field-invalid");
     }
-    if (mail.value) {
-        mail.classList.remove("field-invalid");
+    if (!message.value) {
+      message.classList.add("field-invalid");
     }
-    if (message.value) {
-        message.classList.remove("field-invalid");
-    }
+  }
+  if (nickname.value) {
+    nickname.classList.remove("field-invalid");
+  }
+  if (mail.value) {
+    mail.classList.remove("field-invalid");
+  }
+  if (message.value) {
+    message.classList.remove("field-invalid");
+  }
 });
 
 window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      if (popup.classList.contains("modal-show")) {
-         popup.classList.remove("modal-show");
-    }
-  }
+  if (evt.keyCode === 27) {
+    if (popup.classList.contains("modal-show")) {
+     popup.classList.remove("modal-show");
+   }
+ }
 });
 
 var maplink = document.querySelector(".map");
@@ -55,19 +55,19 @@ var mappopup = document.querySelector(".modal-map");
 var mapclose = mappopup.querySelector(".modal-close");
 
 maplink.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    mappopup.classList.add("modal-show");
+  evt.preventDefault();
+  mappopup.classList.add("modal-show");
 });
 
 mapclose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    mappopup.classList.remove("modal-show");
+  evt.preventDefault();
+  mappopup.classList.remove("modal-show");
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (mappopup.classList.contains("modal-show")) {
-        mappopup.classList.remove("modal-show");
+      mappopup.classList.remove("modal-show");
     }
   }
 });
